@@ -1,5 +1,7 @@
 package practice;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -27,6 +29,7 @@ public class Base {
 				
 		driver.manage().window().maximize();
 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	@AfterMethod
 	public void close() throws InterruptedException {
