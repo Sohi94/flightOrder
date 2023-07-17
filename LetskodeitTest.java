@@ -19,7 +19,7 @@ public class LetskodeitTest extends Base {
 
 	}
 
-	// @Test
+	 @Test
 	public void signInButton() throws InterruptedException {
 		driver.get(url);
 		driver.findElement(By.linkText("SIGN IN")).click();
@@ -29,7 +29,7 @@ public class LetskodeitTest extends Base {
 		password.sendKeys("1424_Sohi");
 	}
 
-	// @Test
+	 @Test
 	public void practicePage() throws InterruptedException {
 		driver.get(url2);
 
@@ -74,7 +74,7 @@ public class LetskodeitTest extends Base {
 
 	}
 
-	// @Test
+	 @Test
 	public void practice_RadioButton() throws InterruptedException {
 		driver.get(url2);
 		String clickOnCar1 = "BMW";
@@ -102,7 +102,7 @@ public class LetskodeitTest extends Base {
 		}
 	}
 
-	// @Test
+	 @Test
 	public void practice_MultipleSelect() throws InterruptedException {
 		driver.get(url2);
 
@@ -120,7 +120,7 @@ public class LetskodeitTest extends Base {
 
 	}
 
-	// @Test
+	 @Test
 	public void practice_AutoSuggest() throws InterruptedException {
 		driver.get(url2);
 
@@ -133,7 +133,7 @@ public class LetskodeitTest extends Base {
 
 	}
 
-	// @Test
+	 //@Test
 	public void practice_EnabledVsDisabled() throws InterruptedException {
 		driver.get(url2);
 
@@ -161,7 +161,7 @@ public class LetskodeitTest extends Base {
 
 	}
 
-	// @Test
+	 @Test
 	public void practice_ElementDisplayed() throws InterruptedException {
 		driver.get(url2);
 
@@ -188,43 +188,37 @@ public class LetskodeitTest extends Base {
 
 	}
 
-	 @Test
+	//@Test
 	public void practice_SwitchToAlert() throws InterruptedException {
 		driver.get(url2);
-		//By.cssSelector("#alert-example-div"));
-		
+		// By.cssSelector("#alert-example-div"));
+
 		boolean clickOnAlert = false;
-		boolean clickOnConfirm= true;
-		
+		boolean clickOnConfirm = true;
+
 		WebElement nameBox = driver.findElement(By.cssSelector("#name.inputs"));
 		nameBox.click();
-		driver.switchTo().alert().sendKeys("SOHIBA");
+		nameBox.sendKeys("Sohi");
 
-		//nameBox.sendKeys("Sohi");
-
-		
-		if(clickOnAlert == true) { 
-		WebElement alertButton = driver.findElement(By.id("alertbtn"));
-		alertButton.click();
-		Thread.sleep(2000);
-		driver.switchTo().alert().accept();
-		Thread.sleep(2000);
+		if (clickOnAlert == true) {
+			WebElement alertButton = driver.findElement(By.id("alertbtn"));
+			alertButton.click();
+			Thread.sleep(2000);
+			driver.switchTo().alert().accept();
+			Thread.sleep(2000);
 		}
-		if(clickOnConfirm== true) {
-		WebElement confirmButton = driver.findElement(By.id("confirmbtn"));
-		confirmButton.click();
-		Thread.sleep(2000);
-		driver.switchTo().alert().dismiss();
-		Thread.sleep(2000);
-		
-		}
+		if (clickOnConfirm == true) {
+			WebElement confirmButton = driver.findElement(By.id("confirmbtn"));
+			confirmButton.click();
+			Thread.sleep(2000);
+			driver.switchTo().alert().dismiss();
+			Thread.sleep(2000);
 
-		
-		
-		
-		// driver.switchTo().alert().sendKeys("Text");
+		}
 
 	}
+
+
 
 	// @Test
 	public void browsingAllCourses() throws InterruptedException {
